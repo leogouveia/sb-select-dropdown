@@ -1,0 +1,16 @@
+<div class="m-2">
+  <app-select
+    (selectionChanged)="handleSelectionChanged($event)"
+    [value]="selectedValue"
+  >
+    <app-option
+      *ngFor="let user of users"
+      [value]="user.id"
+      [disabled]="user.disabled"
+      >{{ user.name }}</app-option
+    >
+  </app-select>
+</div>
+<div class="m-4">
+  {{ testValue }}
+</div>

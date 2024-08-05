@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  border: transparent 1px solid;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--color-background, #e5f2f8);
+  }
+  &.selected {
+    &:before {
+      content: '✔️';
+    }
+    .option-content {
+      padding-left: 7px;
+    }
+  }
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
